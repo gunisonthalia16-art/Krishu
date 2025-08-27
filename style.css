@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #d6b4fc, #fcb4d6);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-top: 20px;
+  animation: fadeIn 3s ease;
+}
+
+.letter-frame {
+  margin: 40px auto;
+  padding: 15px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: rotate(-2deg);
+}
+
+.letter-frame img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.ending {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  animation: typing 5s steps(40, end), blink .75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  width: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  color: #d66fcf;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.floating-hearts::before, .floating-hearts::after {
+  content: "💫 💕 🌸 ✨";
+  position: absolute;
+  font-size: 2rem;
+  animation: float 10s infinite linear;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 200px }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
