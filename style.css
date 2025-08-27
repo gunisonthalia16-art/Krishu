@@ -1,91 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap');
+
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #d6b4fc, #fcb4d6);
+  padding: 0;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
   color: #fff;
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-.container {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
-}
-
-.title {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
-  margin-top: 20px;
-  animation: fadeIn 3s ease;
-}
-
-.letter-frame {
-  margin: 40px auto;
-  padding: 15px;
-  background: #fff;
-  display: inline-block;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transform: rotate(-2deg);
-}
-
-.letter-frame img {
-  max-width: 300px;
-  border-radius: 10px;
-}
-
-.ending {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.5rem;
-  margin-top: 20px;
-  animation: typing 5s steps(40, end), blink .75s step-end infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #fff;
-  width: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#music-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #fff;
-  color: #d66fcf;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-  font-size: 14px;
+.envelope {
+  font-size: 6rem;
+  margin-top: 150px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: bounce 1.5s infinite;
 }
 
-.floating-hearts::before, .floating-hearts::after {
-  content: "💫 💕 🌸 ✨";
-  position: absolute;
-  font-size: 2rem;
-  animation: float 10s infinite linear;
+.hint {
+  font-size: 1rem;
+  margin-top: -10px;
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-top: 50px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.letter {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 50px auto;
+  max-width: 700px;
+  backdrop-filter: blur(10px);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  box-shadow: 0px 5px 25px rgba(0,0,0,0.2);
+  animation: slideUp 1.5s ease;
+}
+
+audio {
+  margin-top: 20px;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-30px);}
-  to { opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 200px }
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes blink {
-  50% { border-color: transparent }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-@keyframes float {
-  0% { transform: translateY(100vh); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(-10vh); opacity: 0; }
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 24px;
+  color: red;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
 }
