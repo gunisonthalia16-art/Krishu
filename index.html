@@ -1,41 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For My Kishmish 💌</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="title">For My Kishmish, On Our 1 Year 💌</h1>
+<head>
+  <meta charset="UTF-8">
+  <title>For My Krishu ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      <div class="letter-frame">
-        <img src="1.jpg_1756291060330.jpeg" alt="Our Love Letter" />
-      </div>
+  <div class="envelope" onclick="openLetter()">
+    ✉️
+    <p class="hint">Click to open</p>
+  </div>
 
-      <p class="ending">Love, Always –Guni ♡</p>
+  <div class="content hidden">
+    <h1>For My Krishu ❤️</h1>
+    <div class="letter">
+      <p>
+
     </div>
 
-    <div class="floating-hearts"></div>
-
-    <!-- Background Music -->
-    <audio id="bg-music" autoplay loop>
-      <source
-        src="https://docs.google.com/uc?export=download&id=1wC5G8p9N4QwbU_1c7hE36gdXXd-bO3Vb"
-        type="audio/mp3"
-      />
+    <audio id="song" autoplay loop>
+      <source src="ivy_17569293104834.mp3" type="audio/mpeg">
     </audio>
+  </div>
 
-    <button id="music-btn">⏸ Pause / ▶ Play</button>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
-const music = document.getElementById("bg-music"); const btn =
-document.getElementById("music-btn"); btn.addEventListener("click", () => { if
-(music.paused) { music.play(); btn.textContent = "⏸ Pause"; } else {
-music.pause(); btn.textContent = "▶ Play"; } });
-<audio autoplay loop controls>
-  <source src="ivy_1756293104834.mp3" type="audio/mpeg" />
-</audio>
